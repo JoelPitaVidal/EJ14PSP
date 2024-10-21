@@ -1,10 +1,11 @@
+import javax.swing.JOptionPane;
 /**
  * Clase TextoImplementado.
  * Se encarga de contar las vocales en un texto dado.
  */
 public class TextoImplementado {
     // Texto en el que se contarán las vocales
-    public String palabra = "aeiou";
+    public String palabra;
 
     // Contadores de vocales
     private int contadorA = 0;
@@ -12,6 +13,10 @@ public class TextoImplementado {
     private int contadorI = 0;
     private int contadorO = 0;
     private int contadorU = 0;
+
+    public TextoImplementado(String palabra) {
+        this.palabra = palabra;
+    }
 
     /**
      * Incrementa el contador de la vocal 'a'.
@@ -60,6 +65,6 @@ public class TextoImplementado {
      * Muestra el número total de vocales contadas.
      */
     public void mostrarTotal() {
-        System.out.println("El total de vocales es: " + getTotal());
+        JOptionPane.showMessageDialog(null, "El total de vocales es: " + getTotal());
     }
 }

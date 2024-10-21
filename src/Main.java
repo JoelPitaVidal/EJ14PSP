@@ -1,9 +1,11 @@
+import javax.swing.JOptionPane;
 /**
  * Clase principal que ejecuta los hilos para contar vocales.
  */
 public class Main {
     public static void main(String[] args) {
-        TextoImplementado texto = new TextoImplementado();
+        String palabra = JOptionPane.showInputDialog("Escriba una cadena de texto");
+        TextoImplementado texto = new TextoImplementado(palabra);
 
         Thread hiloA = new Thread(new CuentaVocalesA(texto));
         Thread hiloE = new Thread(new CuentaVocalesE(texto));

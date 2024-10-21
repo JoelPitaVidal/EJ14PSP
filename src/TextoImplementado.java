@@ -8,7 +8,11 @@ public class TextoImplementado {
     public String palabra;
 
     // Contadores de vocales
-    private int contador = 0;
+    private int contadorA = 0;
+    private int contadorE = 0;
+    private int contadorI = 0;
+    private int contadorO = 0;
+    private int contadorU = 0;
 
     public TextoImplementado(String palabra) {
         this.palabra = palabra;
@@ -18,35 +22,35 @@ public class TextoImplementado {
      * Incrementa el contador de la vocal 'a'.
      */
     public synchronized void incrementarA() {
-        contador++;
+        contadorA++;
     }
 
     /**
      * Incrementa el contador de la vocal 'e'.
      */
     public synchronized void incrementarE() {
-        contador++;
+        contadorE++;
     }
 
     /**
      * Incrementa el contador de la vocal 'i'.
      */
     public synchronized void incrementarI() {
-        contador++;
+        contadorI++;
     }
 
     /**
      * Incrementa el contador de la vocal 'o'.
      */
     public synchronized void incrementarO() {
-        contador++;
+        contadorO++;
     }
 
     /**
      * Incrementa el contador de la vocal 'u'.
      */
     public synchronized void incrementarU() {
-        contador++;
+        contadorU++;
     }
 
     /**
@@ -54,13 +58,16 @@ public class TextoImplementado {
      * @return El número total de vocales.
      */
     public synchronized int getTotal() {
-        return contador;
+        return contadorA + contadorE + contadorI + contadorO + contadorU;
     }
 
     /**
      * Muestra el número total de vocales contadas.
      */
     public void mostrarTotal() {
-        JOptionPane.showMessageDialog(null, "El total de vocales es: " + getTotal());
+        JOptionPane.showMessageDialog(null, "El total de vocales es: " + getTotal()
+        +"  La cantidad de cada vocál es:  \nA = "+contadorA
+        +"\nE = "+contadorE + "\nI = "+contadorI+"\nO = "+contadorO
+        +"\nU = "+contadorU);
     }
 }

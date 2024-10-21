@@ -14,11 +14,21 @@ public class CuentaVocalesO implements Runnable {
     }
 
     @Override
+    //Comenzamos el hilo
     public void run() {
         for (char c : texto.palabra.toCharArray()) {
+            //Abrímos un bucle, convertimos la cadena de texto en una matriz de caracteres,
+            //y cada caracter de la cadena en un elemento de la matriz,igualandolo a "c"
+            //Comparamos "c" con la letra que queremos encontrar
             if (c == 'o') {
+                //Incrementamos el contador en caso de que esta esté
+                texto.incrementarO();
+            } else if (c == 'O') {
                 texto.incrementarO();
             }
+            //Fin del if
         }
+        //Fin del bucle
     }
+    //Fin del hilo
 }

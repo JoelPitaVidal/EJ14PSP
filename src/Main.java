@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
  */
 public class Main {
     public static void main(String[] args) {
-
+    //Iniciamos el JOptionPane para insertar la palabra e instanciamos el objeto Texto, que recíbe el string palabra
         String palabra = JOptionPane.showInputDialog("Escriba una cadena de texto");
         TextoImplementado texto = new TextoImplementado(palabra);
 

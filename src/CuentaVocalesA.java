@@ -1,12 +1,22 @@
-public class CuentaVocalesA implements Runnable{
+/**
+ * Clase que cuenta la vocal 'a' en el texto.
+ */
+public class CuentaVocalesA implements Runnable {
+    private final TextoImplementado texto;
 
-    TextoImplementado text = new TextoImplementado("aeiou",0,0,0,0,0,0);
+    /**
+     * Constructor de CuentaVocalesA.
+     * @param texto Instancia de TextoImplementado.
+     */
+    public CuentaVocalesA(TextoImplementado texto) {
+        this.texto = texto;
+    }
 
     @Override
     public void run() {
-        for(int x=0;x<text.palabra.length();x++) {
-            if ((text.palabra.charAt(x)=='i')){
-                text.setContadorA(text.contadorA++);
+        for (char c : texto.palabra.toCharArray()) {
+            if (c == 'a') {
+                texto.incrementarA();
             }
         }
     }

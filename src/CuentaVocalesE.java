@@ -1,12 +1,23 @@
-public class CuentaVocalesE implements Runnable{
+/**
+ * Clase que cuenta la vocal 'e' en el texto.
+ */
+public class CuentaVocalesE implements Runnable {
+    private final TextoImplementado texto;
 
-    TextoImplementado text = new TextoImplementado("aeiou",0,0,0,0,0,0);
+    /**
+     * Constructor de CuentaVocalesE.
+     *
+     * @param texto Instancia de TextoImplementado.
+     */
+    public CuentaVocalesE(TextoImplementado texto) {
+        this.texto = texto;
+    }
 
     @Override
     public void run() {
-        for(int x=0;x<text.palabra.length();x++) {
-            if ((text.palabra.charAt(x)=='i')){
-                text.setContadorE(text.contadorE++);
+        for (char c : texto.palabra.toCharArray()) {
+            if (c == 'e') {
+                texto.incrementarE();
             }
         }
     }

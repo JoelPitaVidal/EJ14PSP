@@ -8,11 +8,7 @@ public class TextoImplementado {
     public String palabra;
 
     // Contadores de vocales
-    private int contadorA = 0;
-    private int contadorE = 0;
-    private int contadorI = 0;
-    private int contadorO = 0;
-    private int contadorU = 0;
+    private int contador = 0;
 
     public TextoImplementado(String palabra) {
         this.palabra = palabra;
@@ -22,35 +18,35 @@ public class TextoImplementado {
      * Incrementa el contador de la vocal 'a'.
      */
     public synchronized void incrementarA() {
-        contadorA++;
+        contador++;
     }
 
     /**
      * Incrementa el contador de la vocal 'e'.
      */
     public synchronized void incrementarE() {
-        contadorE++;
+        contador++;
     }
 
     /**
      * Incrementa el contador de la vocal 'i'.
      */
     public synchronized void incrementarI() {
-        contadorI++;
+        contador++;
     }
 
     /**
      * Incrementa el contador de la vocal 'o'.
      */
     public synchronized void incrementarO() {
-        contadorO++;
+        contador++;
     }
 
     /**
      * Incrementa el contador de la vocal 'u'.
      */
     public synchronized void incrementarU() {
-        contadorU++;
+        contador++;
     }
 
     /**
@@ -58,7 +54,7 @@ public class TextoImplementado {
      * @return El número total de vocales.
      */
     public synchronized int getTotal() {
-        return contadorA + contadorE + contadorI + contadorO + contadorU;
+        return contador;
     }
 
     /**

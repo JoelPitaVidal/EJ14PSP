@@ -17,12 +17,12 @@ public class CuentaVocalesA implements Runnable {
     public void run() {
         //Abrímos un bucle, convertimos la cadena de texto en una matriz de caracteres,
         //y cada caracter de la cadena en un elemento de la matriz,igualandolo a "c"
-        for (char c : texto.palabra.toCharArray()) {
+        for (char c : texto.palabra.toLowerCase().toCharArray()) {
             //Comparamos "c" con la letra que queremos encontrar
             if (c == 'a') {
                 //Incrementamos el contador en caso de que esta esté
                 texto.incrementarA();
-            } else if (c == 'A') {
+            } else if (c == 'á') {
                 texto.incrementarA();
             }
             //Fin del if

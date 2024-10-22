@@ -18,12 +18,12 @@ public class CuentaVocalesE implements Runnable {
     public void run() {
         //Abrímos un bucle, convertimos la cadena de texto en una matriz de caracteres,
         //y cada caracter de la cadena en un elemento de la matriz,igualandolo a "c"
-        for (char c : texto.palabra.toCharArray()) {
+        for (char c : texto.palabra.toLowerCase().toCharArray()) {
             //Comparamos "c" con la letra que queremos encontrar
             if (c == 'e') {
                 //Incrementamos el contador en caso de que esta esté
                 texto.incrementarE();
-            } else if (c == 'E') {
+            } else if (c == 'é') {
                 texto.incrementarE();
             }
             //Fin del if
